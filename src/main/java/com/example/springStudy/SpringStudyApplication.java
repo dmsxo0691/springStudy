@@ -1,8 +1,6 @@
 package com.example.springStudy;
 
-import com.example.springStudy.chap02.AppContext;
-import com.example.springStudy.chap02.Greeter;
-import com.example.springStudy.chap02.MemberListPrinter;
+import com.example.springStudy.chap02.*;
 import com.example.springStudy.chap02.config.AppCtx;
 import com.example.springStudy.chap02.handle.DuplicateMemberException;
 import com.example.springStudy.chap02.handle.MemberNotFoundException;
@@ -47,6 +45,12 @@ public class SpringStudyApplication {
                 continue;
             } else if (command.equals("list")) {
                 processListCommand();
+                continue;
+            } else if (command.startsWith("info")) {
+                processInfoCommand(command.split(" "));
+                continue;
+            } else if (command.equals("version")) {
+                processVersionCommand();
                 continue;
             }
             printHelp();
@@ -109,6 +113,22 @@ public class SpringStudyApplication {
         System.out.println("new 이메일 이름 암호 암호확인");
         System.out.println("change 이메일 현재비번 변경비번");
         System.out.println();
+    }
+
+    private static void processInfoCommand(String[] arg){
+        if(arg.length != 2){
+            printHelp();
+            return;
+        }
+        MemberInfoPrinter memberInfoPrinter =
+                ctx.getBean("infoPrinter", MemberInfoPrinter.class);
+        memberInfoPrinter.printMemberInfo(arg[1]);
+    }
+
+    private static void processVersionCommand(){
+        VersionPrinter  versionPrinter =
+                ctx.getBean("versionPrinter", VersionPrinter.class);
+        versionPrinter.print();
     }
 }
 
