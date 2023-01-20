@@ -3,8 +3,10 @@ package com.example.springStudy.chap02.service;
 import com.example.springStudy.chap02.entity.Member;
 import com.example.springStudy.chap02.handle.MemberNotFoundException;
 import com.example.springStudy.chap02.repository.MemberDao;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class ChangePasswordService {
+    @Autowired
     private MemberDao memberDao;
 
     public void changePassword(String email, String oldPwd, String newPwd){
