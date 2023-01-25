@@ -1,9 +1,7 @@
-package com.example.springStudy.chap02.entity;
+package com.example.springStudy.chap04.entity;
 
-import com.example.springStudy.chap02.handle.WrongIdPasswordException;
-import lombok.AllArgsConstructor;
+import com.example.springStudy.chap04.handle.WrongIdPasswordException;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;

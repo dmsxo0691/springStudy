@@ -1,13 +1,13 @@
 package com.example.springStudy;
 
-import com.example.springStudy.chap02.*;
-import com.example.springStudy.chap02.config.AppCtx;
-import com.example.springStudy.chap02.handle.DuplicateMemberException;
-import com.example.springStudy.chap02.handle.MemberNotFoundException;
-import com.example.springStudy.chap02.handle.RegisterRequest;
-import com.example.springStudy.chap02.handle.WrongIdPasswordException;
-import com.example.springStudy.chap02.service.ChangePasswordService;
-import com.example.springStudy.chap02.service.MemberRegisterService;
+import com.example.springStudy.chap04.*;
+import com.example.springStudy.chap04.config.AppCtx;
+import com.example.springStudy.chap04.handle.DuplicateMemberException;
+import com.example.springStudy.chap04.handle.MemberNotFoundException;
+import com.example.springStudy.chap04.handle.RegisterRequest;
+import com.example.springStudy.chap04.handle.WrongIdPasswordException;
+import com.example.springStudy.chap04.service.ChangePasswordService;
+import com.example.springStudy.chap04.service.MemberRegisterService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -26,7 +26,7 @@ public class SpringStudyApplication {
     public static void main(String[] args) throws IOException {
         SpringApplication.run(SpringStudyApplication.class, args);
 
-        ctx = new AnnotationConfigApplicationContext(AppCtx.class);
+        ctx =  new AnnotationConfigApplicationContext(AppCtx.class);
 
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));

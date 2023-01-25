@@ -1,8 +1,8 @@
-package com.example.springStudy.chap02.service;
+package com.example.springStudy.chap04.service;
 
-import com.example.springStudy.chap02.entity.Member;
-import com.example.springStudy.chap02.handle.MemberNotFoundException;
-import com.example.springStudy.chap02.repository.MemberDao;
+import com.example.springStudy.chap04.entity.Member;
+import com.example.springStudy.chap04.handle.MemberNotFoundException;
+import com.example.springStudy.chap04.repository.MemberDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ChangePasswordService {

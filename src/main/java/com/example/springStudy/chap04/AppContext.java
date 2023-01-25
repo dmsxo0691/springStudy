@@ -1,4 +1,4 @@
-package com.example.springStudy.chap02;
+package com.example.springStudy.chap04;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,7 @@
-package com.example.springStudy.chap02;
+package com.example.springStudy.chap04;
 
-import com.example.springStudy.chap02.entity.Member;
-import com.example.springStudy.chap02.repository.MemberDao;
+import com.example.springStudy.chap04.entity.Member;
+import com.example.springStudy.chap04.repository.MemberDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class MemberInfoPrinter {

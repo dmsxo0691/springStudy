@@ -1,6 +1,6 @@
-package com.example.springStudy.chap02.repository;
+package com.example.springStudy.chap04.repository;
 
-import com.example.springStudy.chap02.entity.Member;
+import com.example.springStudy.chap04.entity.Member;
 
 import java.util.Collection;
 import java.util.HashMap;

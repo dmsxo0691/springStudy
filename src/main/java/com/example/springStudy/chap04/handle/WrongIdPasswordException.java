@@ -1,4 +1,4 @@
-package com.example.springStudy.chap02.handle;
+package com.example.springStudy.chap04.handle;
 
 public class WrongIdPasswordException extends RuntimeException{
 
