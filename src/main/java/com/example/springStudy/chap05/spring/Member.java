@@ -1,7 +1,8 @@
-package com.example.springStudy.chap04.entity;
+package com.example.springStudy.chap05.spring;
 
-import com.example.springStudy.chap04.handle.WrongIdPasswordException;
+import com.example.springStudy.chap05.spring.WrongIdPasswordException;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

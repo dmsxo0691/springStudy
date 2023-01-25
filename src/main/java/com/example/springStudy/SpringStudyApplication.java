@@ -1,13 +1,15 @@
 package com.example.springStudy;
 
-import com.example.springStudy.chap04.*;
-import com.example.springStudy.chap04.config.AppCtx;
-import com.example.springStudy.chap04.handle.DuplicateMemberException;
-import com.example.springStudy.chap04.handle.MemberNotFoundException;
-import com.example.springStudy.chap04.handle.RegisterRequest;
-import com.example.springStudy.chap04.handle.WrongIdPasswordException;
-import com.example.springStudy.chap04.service.ChangePasswordService;
-import com.example.springStudy.chap04.service.MemberRegisterService;
+import com.example.springStudy.chap05.config.AppCtx;
+import com.example.springStudy.chap05.spring.DuplicateMemberException;
+import com.example.springStudy.chap05.spring.MemberNotFoundException;
+import com.example.springStudy.chap05.spring.RegisterRequest;
+import com.example.springStudy.chap05.spring.WrongIdPasswordException;
+import com.example.springStudy.chap05.spring.ChangePasswordService;
+import com.example.springStudy.chap05.spring.MemberRegisterService;
+import com.example.springStudy.chap05.spring.MemberInfoPrinter;
+import com.example.springStudy.chap05.spring.MemberListPrinter;
+import com.example.springStudy.chap05.spring.VersionPrinter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -64,7 +66,7 @@ public class SpringStudyApplication {
         }
 
         MemberRegisterService memberRegisterService =
-                ctx.getBean("memberRegisterService", MemberRegisterService.class);
+                ctx.getBean(MemberRegisterService.class);
         RegisterRequest req = new RegisterRequest();
         req.setEmail(arg[1]);
         req.setName(arg[2]);
@@ -89,7 +91,7 @@ public class SpringStudyApplication {
             return;
         }
         ChangePasswordService changePasswordService =
-                ctx.getBean("changePasswordService", ChangePasswordService.class);
+                ctx.getBean(ChangePasswordService.class);
         try {
             changePasswordService.changePassword(arg[1], arg[2], arg[3]);
             System.out.println("암호 변경 완료");
@@ -126,7 +128,7 @@ public class SpringStudyApplication {
     }
 
     private static void processVersionCommand(){
-        VersionPrinter  versionPrinter =
+        VersionPrinter versionPrinter =
                 ctx.getBean("versionPrinter", VersionPrinter.class);
         versionPrinter.print();
     }

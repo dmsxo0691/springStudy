@@ -1,4 +1,4 @@
-package com.example.springStudy.chap04;
+package com.example.springStudy.chap05.spring;
 
 public class VersionPrinter {
     private int majorVersion;

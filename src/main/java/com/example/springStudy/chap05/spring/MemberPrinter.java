@@ -1,6 +1,5 @@
-package com.example.springStudy.chap04;
+package com.example.springStudy.chap05.spring;
 
-import com.example.springStudy.chap04.entity.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 

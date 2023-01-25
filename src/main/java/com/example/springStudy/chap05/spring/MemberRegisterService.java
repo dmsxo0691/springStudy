@@ -1,14 +1,12 @@
-package com.example.springStudy.chap04.service;
+package com.example.springStudy.chap05.spring;
 
-import com.example.springStudy.chap04.entity.Member;
-import com.example.springStudy.chap04.handle.DuplicateMemberException;
-import com.example.springStudy.chap04.handle.RegisterRequest;
-import com.example.springStudy.chap04.repository.MemberDao;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+@Component
 @Getter
 public class MemberRegisterService {
     @Autowired

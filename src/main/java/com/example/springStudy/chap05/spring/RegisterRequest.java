@@ -1,4 +1,4 @@
-package com.example.springStudy.chap04.handle;
+package com.example.springStudy.chap05.spring;
 
 import lombok.Getter;
 import lombok.Setter;

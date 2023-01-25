@@ -1,6 +1,4 @@
-package com.example.springStudy.chap04;
-
-import com.example.springStudy.chap04.entity.Member;
+package com.example.springStudy.chap05.spring;
 
 public class MemberSummaryPrinter extends MemberPrinter{
 
